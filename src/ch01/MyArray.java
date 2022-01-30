@@ -20,4 +20,25 @@ public class MyArray {
         }
         intArr[count++] = num;
     }
+
+    public void insertElement(int position, int num){
+        int i;
+
+        if(count >= ARRAY_SIZE){ //꽉 찬 경우
+            System.out.println("not enough memory");
+            return;
+        }
+
+        if(position < 0 || position > count){  //index error
+            System.out.println("insert Error");
+            return;
+        }
+
+        for(i = count -1; i>= position ; i --){
+            intArr[i+1] = intArr[i];       // 하나씩 이동
+        }
+
+        intArr[position] = num;
+        count++;
+    }
 }
