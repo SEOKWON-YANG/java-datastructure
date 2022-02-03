@@ -13,6 +13,13 @@ public class MyArray {
         intArr = new int[ARRAY_SIZE];
     }
 
+    public MyArray(int size)
+    {
+        count = 0;
+        ARRAY_SIZE = size;
+        intArr = new int[size];
+    }
+
     public void addElement(int num) {
         if (count >= ARRAY_SIZE) {
             System.out.println("not enough memory");
